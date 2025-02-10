@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ensure Full-Screen Layout */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Modern Background Gradient */
+.fullscreen-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text Styling */
+:root {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: #1a1a2e;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Search Input Field */
+.search-input {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  width: 280px;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  border: 1px solid #00d4ff;
+}
+
+/* Buttons: Neon Glow Effect */
+.glow-button {
+  background: linear-gradient(90deg, #00d4ff, #0096ff);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+  cursor: pointer;
+}
+
+.glow-button:hover {
+  background: linear-gradient(90deg, #0096ff, #00d4ff);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* Movie Cards: Glassmorphism Effect */
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Bookmarked Movies Section */
+.bookmarked-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.bookmark-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00d4ff;
+}
+
+/* Watched Button Styling */
+.watched-button {
+  padding: 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.watched-button.watched {
+  background: #32cd32;
+  color: black;
+  box-shadow: 0 0 10px rgba(50, 205, 50, 0.6);
+}
+
+.watched-button.unwatched {
+  background: #ff4747;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 71, 71, 0.6);
+}
+
+.watched-button:hover {
+  transform: scale(1.05);
+}
